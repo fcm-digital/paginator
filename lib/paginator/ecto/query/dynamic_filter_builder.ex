@@ -1,9 +1,9 @@
 defmodule Paginator.Ecto.Query.DynamicFilterBuilder do
   @dispatch_table %{
-    desc: Paginator.Ecto.Query.DescNullsFirst,
+    desc: Paginator.Ecto.Query.Desc,
     desc_nulls_first: Paginator.Ecto.Query.DescNullsFirst,
     desc_nulls_last: Paginator.Ecto.Query.DescNullsLast,
-    asc: Paginator.Ecto.Query.AscNullsLast,
+    asc: Paginator.Ecto.Query.Asc,
     asc_nulls_last: Paginator.Ecto.Query.AscNullsLast,
     asc_nulls_first: Paginator.Ecto.Query.AscNullsFirst
   }
