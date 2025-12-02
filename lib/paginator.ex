@@ -50,6 +50,10 @@ defmodule Paginator do
 
   alias Paginator.{Config, Cursor, Ecto.Query, Page, Page.Metadata}
 
+  defdelegate non_executable_binary_to_term(binary, opts \\ []),
+    to: Paginator.NonExecutableBinaryToTerm,
+    as: :decode
+
   defmacro __using__(opts) do
     quote do
       @defaults unquote(opts)
