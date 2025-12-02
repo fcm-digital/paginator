@@ -6,7 +6,7 @@ defmodule Paginator.Mixfile do
 
   def project do
     [
-      app: :paginator_fcm,
+      app: :paginator,
       name: "Paginator",
       version: @version,
       elixir: "~> 1.17",
@@ -19,8 +19,7 @@ defmodule Paginator.Mixfile do
         plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
       ],
       package: package(),
-      docs: docs(),
-      hex: hex()
+      docs: docs()
     ]
   end
 
@@ -49,6 +48,7 @@ defmodule Paginator.Mixfile do
       description: "Cursor based pagination for Elixir Ecto.",
       maintainers: ["Alex Castaño", "Rock"],
       licenses: ["MIT"],
+      organization: "fcm",
       links: %{
         "Changelog" => "https://fcm.hexdocs.pm/paginator/changelog.html",
         "GitHub" => @source_url
@@ -68,12 +68,6 @@ defmodule Paginator.Mixfile do
       source_url: @source_url,
       source_ref: "v#{@version}",
       formatters: ["html"]
-    ]
-  end
-
-  defp hex do
-    [
-      organization: "fcm"
     ]
   end
 end
